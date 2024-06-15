@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho da Feira </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Chat Guerra Fria - Trabalho da feira multidiscplinar Resolve 2024</h2>
+        <h3>Assuntos:
+            1 - Guerra Fria
+            2 - Jogos Olímpicos
+            3 - Boicotes
+        </h3>
+        <form id="chatForm">
+            <input type="text" id="userInput" placeholder="Digite 1, 2 ou 3.">
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="botResponse" class="response"></div>
+    </div>
+
+    <script>
+        document.getElementById('chatForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var userInput = document.getElementById('userInput').value.trim().toLowerCase();
+
+            if (userInput === '1') {
+                document.getElementById('botResponse').innerHTML = '<p><strong>Bot:</strong> A Guerra Fria foi um período de tensão geopolítica entre a União Soviética e seus aliados (Pacto de Varsóvia) e os Estados Unidos e seus aliados (OTAN) após a Segunda Guerra Mundial até o início da década de 1990.</p>';
+            }
+            else if (userInput === '2') {
+                document.getElementById('botResponse').innerHTML = '<p><strong>Bot:</strong> Os Jogos Olímpicos são um evento multiesportivo global com modalidades de verão e de inverno, em que milhares de atletas participam de várias competições. Atualmente os Jogos são realizados a cada dois anos, em anos pares, com os Jogos Olímpicos de Verão e de Inverno se alternando, embora ocorram a cada quatro anos no âmbito dos respectivos Jogos sazonais.</p>';}
+            
+            else if (userInput ==='3') {
+                document.getElementById('botResponse').innerHTML='<p><strong>Bot:</strong> Os boicotes das Olimpíadas de 1980 e 1984 foram eventos políticos significativos durante a Guerra Fria. Em 1980, liderado pela URSS, ocorreu o boicote dos Jogos de Moscou por países ocidentais em protesto à invasão soviética ao Afeganistão. Em resposta, os países do bloco comunista boicotaram os Jogos de Los Angeles em 1984, devido a preocupações com segurança e política.'
+            }
+            else {
+                document.getElementById('botResponse').innerHTML = '<p><strong>Bot:</strong> Desculpe, não tenho informações sobre esse tema.</p>';
+            }
+        });
+    </script>
+    <h6>Isaac Silva Gonçalves ©</h6>
+</body>
+</html>
